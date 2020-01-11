@@ -1,0 +1,14 @@
+giva.rds.dir: "C:/Users/nipper/cz_rds_store/branches/cz_gdrive/"
+giva.output.dir: "C:/cz_salsa/gidsweek_uploaden/"
+
+gs_downloads: "C:/Users/nipper/Downloads/cz_downloads"
+
+url_pfx: "docs.google.com/spreadsheets/d/"
+url_roosters:           "1zt4xR9non3vIus4A9gVvk15HTMAunPBGywMOtAMI-0U"
+url_itunes_cupboard:    "10ZlUGqnG_yWGAgVYx7k6XD_i5BD9K2OUi2NJXu0E_Gc"
+url_wordpress_gidsinfo: "16DrvLEXi3mEa9AbSw28YBkYpCvyO1wXwBwaNi7HpBkA"
+url_nipper_express:     "10HxPg0CP1XuWGWqCYHyvQhN8UoHu2eYXPXyp0fCkf24"
+
+cz_rds_store: "C:/Users/nipper/cz_rds_store/branches/cz_gdrive/"
+
+modelrooster_versie: "20200102"
