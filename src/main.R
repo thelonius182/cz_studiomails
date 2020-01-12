@@ -90,9 +90,9 @@ CZ-teamservice
 
   tbl_msg_data <- mailen_dag2_pres %>% 
     mutate(
-      # To = sprintf("%s <%s>", pres, pres_mail),
-      To = sprintf("%s <lcavdakker@gmail.com>", pres),
-      From = "no_reply_cz.teamservice@gmail.com",
+      To = sprintf("%s <%s>", pres, pres_mail),
+      #To = sprintf("%s <lcavdakker@gmail.com>", pres),
+      From = "cz.teamservice@gmail.com",
       Subject = sprintf("Herinnering: %s", 
                         str_replace(format(uitzending, "%A %d %B"), " 0", " ")),
       body = sprintf(mail_body_dag2_pres,
@@ -128,9 +128,9 @@ CZ-teamservice
   
   tbl_msg_data <- mailen_dag2_tech %>% 
     mutate(
-      # To = sprintf("%s <%s>", pres, pres_mail),
-      To = sprintf("%s <lcavdakker@gmail.com>", tech),
-      From = "no_reply_cz.teamservice@gmail.com",
+      To = sprintf("%s <%s>", tech, tech_mail),
+      # To = sprintf("%s <lcavdakker@gmail.com>", tech),
+      From = "cz.teamservice@gmail.com",
       Subject = sprintf("Herinnering: %s", 
                         str_replace(format(uitzending, "%A %d %B"), " 0", " ")),
       body = sprintf(mail_body_dag2_tech,
@@ -168,9 +168,9 @@ CZ-teamservice
   
   tbl_msg_data <- mailen_dag10_pres %>% 
     mutate(
-      # To = sprintf("%s <%s>", pres, pres_mail),
-      To = sprintf("%s <lcavdakker@gmail.com>", pres),
-      From = "no_reply_cz.teamservice@gmail.com",
+      To = sprintf("%s <%s>", pres, pres_mail),
+      # To = sprintf("%s <lcavdakker@gmail.com>", pres),
+      From = "cz.teamservice@gmail.com",
       Subject = sprintf("Herinnering: %s", 
                         str_replace(format(uitzending, "%A %d %B"), " 0", " ")),
       body = sprintf(mail_body_dag10_pres,
@@ -206,9 +206,9 @@ CZ-teamservice
   
   tbl_msg_data <- mailen_dag10_tech %>% 
     mutate(
-      # To = sprintf("%s <%s>", pres, pres_mail),
-      To = sprintf("%s <lcavdakker@gmail.com>", tech),
-      From = "no_reply_cz.teamservice@gmail.com",
+      To = sprintf("%s <%s>", tech, tech_mail),
+      # To = sprintf("%s <lcavdakker@gmail.com>", tech),
+      From = "cz.teamservice@gmail.com",
       Subject = sprintf("Herinnering: %s", 
                         str_replace(format(uitzending, "%A %d %B"), " 0", " ")),
       body = sprintf(mail_body_dag10_tech,
