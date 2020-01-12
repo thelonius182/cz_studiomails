@@ -150,7 +150,7 @@ CZ-teamservice
 }
 
 # over 10 dagen ----
-over_10_dagen <- today(tzone = "Europe/Amsterdam") + ddays(11L)
+over_10_dagen <- today(tzone = "Europe/Amsterdam") + ddays(10L)
 
 mailen_dag10_pres <- tbl_presentatie %>% 
   select(pres, pres_mail, pres_roep, uitzending, pres_send, uren, tech, tech_tlf) %>% 
@@ -226,4 +226,3 @@ CZ-teamservice
   safe_send_msg <- safely(gm_send_message)
   sent_mail <- cz_msgs %>% map(safe_send_msg)
 }
-
