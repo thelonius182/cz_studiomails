@@ -10,7 +10,7 @@ library(gmailr)
 library(purrr)
 
 gm_auth_configure(path = "cz-studiomails.json")
-gm_auth(email = "cz.teamservice@gmail.com")
+gm_auth(cache = ".secret", email = "cz.teamservice@gmail.com")
 
 # define functions ----
 cz_extract_sheet <- function(ss_name, sheet_name) {
@@ -73,6 +73,7 @@ rm(tbl_presentatie.I, tbl_raw_presentatie, tbl_teamleden)
 
 # overmorgen ----
 overmorgen <- today(tzone = "Europe/Amsterdam") + ddays(2L)
+# overmorgen <- ymd("2020-08-24")
 
 mailen_dag2_pres <- tbl_presentatie %>% 
   select(pres, pres_mail, pres_roep, uitzending, pres_send, uren, tech, tech_tlf) %>% 
@@ -90,8 +91,8 @@ CZ-teamservice
 
   tbl_msg_data <- mailen_dag2_pres %>% 
     mutate(
-      To = sprintf("%s <%s>", pres, pres_mail),
-      #To = sprintf("%s <lcavdakker@gmail.com>", pres),
+      # To = sprintf("%s <lcavdakker@gmail.com>", pres),
+      To = sprintf("%s <%s>", pres, pres_mail), 
       From = "cz.teamservice@gmail.com",
       Subject = sprintf("Herinnering: %s", 
                         str_replace(format(uitzending, "%A %d %B"), " 0", " ")),
@@ -128,8 +129,8 @@ CZ-teamservice
   
   tbl_msg_data <- mailen_dag2_tech %>% 
     mutate(
-      To = sprintf("%s <%s>", tech, tech_mail),
       # To = sprintf("%s <lcavdakker@gmail.com>", tech),
+      To = sprintf("%s <%s>", tech, tech_mail),
       From = "cz.teamservice@gmail.com",
       Subject = sprintf("Herinnering: %s", 
                         str_replace(format(uitzending, "%A %d %B"), " 0", " ")),
